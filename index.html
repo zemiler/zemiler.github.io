@@ -31,28 +31,37 @@ body {
     font-family: Consolas, monospace, Monaco, "Courier New", Courier;
     font-weight: normal;
     font-size: 1.25rem;
-    line-height: 1.5em;
     text-align: center;
     position: relative;
     padding-top: 50px;
     -webkit-text-size-adjust: 100%
 }
 
-h1 {
+.brand {
     font-size: 4rem;
     letter-spacing: 0.5rem;
+    vertical-align: text-bottom;
 }
 
 @media screen and (min-width: 512px) {
-    h1 {
+    .brand {
         font-size: 6rem;
     }
 }
 
+.center {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .glow {
     animation: neonGlow 2s infinite alternate cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
+
+/* * { border: 1px dashed white; } */
 
 @keyframes neonGlow {
     0% {
@@ -85,8 +94,10 @@ h1 {
 </head>
 
 <body>
-    <div>
-        <h1 class="glow">Zemiler</h1>
+    <div class="center">
+        <div class="glow">
+            <span class="brand">Zemiler</span>
+        </div>   
     </div>
 </body>
 
